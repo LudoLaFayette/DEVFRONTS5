@@ -114,11 +114,32 @@ let chaussures = [
     },
   ];
 // 1/ : 
-  for (let i = 0; i < chaussures.length; i++) {
+//   for (let i = 0; i < chaussures.length; i++) {
 
-    let chaussure = chaussures[i];
+//     let chaussure = chaussures[i];
 
-    console.log("Chaussure #" + (i + 1));
+//     console.log("Chaussure #" + (i + 1));
+//     console.log("Marque: " + chaussure.marque);
+//     console.log("Titre: " + chaussure.titre);
+//     console.log("Collector: " + chaussure.collector);
+//     console.log("Tailles Disponibles: " + chaussure.taillesDispo.join(", "));
+//     console.log("Prix: " + chaussure.prix);
+//     console.log("Éléments:");
+//     console.log("  Lacets: " + chaussure.elements.lacets);
+//     console.log("  Corps: " + chaussure.elements.corps);
+
+
+//     if (chaussure.elements.semelle) {
+//       console.log("  Semelle: " + chaussure.elements.semelle);
+//     }
+//     if (chaussure.elements.languette) {
+//       console.log("  Languette: " + chaussure.elements.languette);
+//     }
+//     console.log("---------------------------------");
+//   };
+
+chaussures.forEach((chaussure, index) => {
+    console.log("Chaussure #" + (index + 1));
     console.log("Marque: " + chaussure.marque);
     console.log("Titre: " + chaussure.titre);
     console.log("Collector: " + chaussure.collector);
@@ -127,8 +148,7 @@ let chaussures = [
     console.log("Éléments:");
     console.log("  Lacets: " + chaussure.elements.lacets);
     console.log("  Corps: " + chaussure.elements.corps);
-
-
+  
     if (chaussure.elements.semelle) {
       console.log("  Semelle: " + chaussure.elements.semelle);
     }
@@ -136,7 +156,7 @@ let chaussures = [
       console.log("  Languette: " + chaussure.elements.languette);
     }
     console.log("---------------------------------");
-  };
+  });
 
   // 2/ :
 let nikes = chaussures.filter(chaussure => chaussure.marque === 'Nike');
