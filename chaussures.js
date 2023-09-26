@@ -113,3 +113,84 @@ let chaussures = [
       },
     },
   ];
+// 1/ : 
+  for (let i = 0; i < chaussures.length; i++) {
+
+    let chaussure = chaussures[i];
+
+    console.log("Chaussure #" + (i + 1));
+    console.log("Marque: " + chaussure.marque);
+    console.log("Titre: " + chaussure.titre);
+    console.log("Collector: " + chaussure.collector);
+    console.log("Tailles Disponibles: " + chaussure.taillesDispo.join(", "));
+    console.log("Prix: " + chaussure.prix);
+    console.log("Éléments:");
+    console.log("  Lacets: " + chaussure.elements.lacets);
+    console.log("  Corps: " + chaussure.elements.corps);
+
+
+    if (chaussure.elements.semelle) {
+      console.log("  Semelle: " + chaussure.elements.semelle);
+    }
+    if (chaussure.elements.languette) {
+      console.log("  Languette: " + chaussure.elements.languette);
+    }
+    console.log("---------------------------------");
+  };
+
+  // 2/ :
+let nikes = chaussures.filter(chaussure => chaussure.marque === 'Nike');
+
+console.log("Chaussures Nike :");
+console.log(nikes);
+
+// 3/ : 
+
+let vansOldSkool = chaussures.filter(chaussure => chaussure.marque === 'Vans' && chaussure.titre === 'Old Skool');
+
+
+console.log("Prix des chaussures Vans 'Old Skool':");
+vansOldSkool.forEach(chaussure => {
+  console.log(chaussure.prix);
+});
+
+// 4/ : 
+
+let chaussuresCollector = chaussures.filter(chaussure => chaussure.collector === true);
+
+console.log("Chaussures Collector :");
+console.log(chaussuresCollector);
+
+
+// 5 / : 
+
+let vansSk8 = chaussures.find(chaussure => chaussure.marque === 'Vans' && chaussure.titre === 'Sk8');
+
+
+if (vansSk8) {
+  console.log("Couleur des lacets de la chaussure Vans Sk8 : " + vansSk8.elements.lacets);
+} else {
+  console.log("La chaussure Vans Sk8 n'a pas été trouvée dans le tableau.");
+};
+
+// 6/ : 
+
+// let vansSk8 = chaussures.find(chaussure => chaussure.marque === 'Vans' && chaussure.titre === 'Sk8');
+
+if (vansSk8) {
+  vansSk8.elements.lacets = 'violet';
+
+  console.log("Chaussure Vans Sk8 mise à jour :");
+  console.log(vansSk8);
+} else {
+  console.log("La chaussure Vans Sk8 n'a pas été trouvée dans le tableau.");
+};
+
+// 7: / 
+// let nikes = chaussures.filter(chaussure => chaussure.marque === 'Nike');
+
+
+let montantTotalNike = nikes.reduce((total, chaussure) => total + chaussure.prix, 0);
+console.log("Montant total des chaussures Nike : " + montantTotalNike + " euros");
+
+
