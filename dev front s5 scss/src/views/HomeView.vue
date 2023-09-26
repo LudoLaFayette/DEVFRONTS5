@@ -1,9 +1,7 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+  import myButton from '@/components/icons/myButton.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <myButton/>
 </template>
