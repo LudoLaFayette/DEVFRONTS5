@@ -138,31 +138,36 @@ let chaussures = [
 //     console.log("---------------------------------");
 //   };
 
-chaussures.forEach((chaussure, index) => {
-    console.log("Chaussure #" + (index + 1));
-    console.log("Marque: " + chaussure.marque);
-    console.log("Titre: " + chaussure.titre);
-    console.log("Collector: " + chaussure.collector);
-    console.log("Tailles Disponibles: " + chaussure.taillesDispo.join(", "));
-    console.log("Prix: " + chaussure.prix);
-    console.log("Éléments:");
-    console.log("  Lacets: " + chaussure.elements.lacets);
-    console.log("  Corps: " + chaussure.elements.corps);
+chaussures.forEach(chaussures => {
+    console.log(chaussures);
+})  
+
+// chaussures.forEach((chaussure, index) => {
+//     console.log("Chaussure #" + (index + 1));
+//     console.log("Marque: " + chaussure.marque);
+//     console.log("Titre: " + chaussure.titre);
+//     console.log("Collector: " + chaussure.collector);
+//     console.log("Tailles Disponibles: " + chaussure.taillesDispo.join(", "));
+//     console.log("Prix: " + chaussure.prix);
+//     console.log("Éléments:");
+//     console.log("  Lacets: " + chaussure.elements.lacets);
+//     console.log("  Corps: " + chaussure.elements.corps);
   
-    if (chaussure.elements.semelle) {
-      console.log("  Semelle: " + chaussure.elements.semelle);
-    }
-    if (chaussure.elements.languette) {
-      console.log("  Languette: " + chaussure.elements.languette);
-    }
-    console.log("---------------------------------");
-  });
+//     if (chaussure.elements.semelle) {
+//       console.log("  Semelle: " + chaussure.elements.semelle);
+//     }
+//     if (chaussure.elements.languette) {
+//       console.log("  Languette: " + chaussure.elements.languette);
+//     }
+//     console.log("---------------------------------");
+//   });
 
   // 2/ :
 let nikes = chaussures.filter(chaussure => chaussure.marque === 'Nike');
 
-console.log("Chaussures Nike :");
-console.log(nikes);
+console.log("Chaussures Nike :", nikes);
+// console.log(nikes);
+
 
 // 3/ : 
 
