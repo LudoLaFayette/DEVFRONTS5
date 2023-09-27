@@ -6,5 +6,7 @@
 </template>
 
 <style lang="scss" scoped>
-
+.button{
+    background-color: $primary-color;
+}
 </style>
