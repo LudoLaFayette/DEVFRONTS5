@@ -53,9 +53,10 @@ import myIcon from '@/components/elements/myIcon.vue'
     <p>hello world</p>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit provident ipsam commodi! Sit, veritatis
       sapiente ut, odit culpa eveniet sunt vitae inventore nobis labore a expedita architecto repellat mollitia id!</p>
+      <MyBackgroundScroll/> 
     <template v-slot:aside>
 
-
+      
       <nav>
         <ul>
           <li><a href="#">Asidelink1</a></li>
@@ -70,10 +71,11 @@ import myIcon from '@/components/elements/myIcon.vue'
       <!-- <myButton link="#">Order Now</myButton>
       <myButton link="#" variant="rounded">Order Now</myButton>
       <myButton link="#" size="small">Order Now</myButton> -->
-      <MyButton href="/about">My link Button</MyButton>
+      <myButton href="/about">My link Button</myButton>
+      <myIcon/>
     </template>
   </Layout>
-  <myIcon/>
   
-  <MyBackgroundScroll/> 
+  
+  
 </template>
