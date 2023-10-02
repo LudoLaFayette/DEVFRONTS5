@@ -1,4 +1,4 @@
-import myButton from '@/components/icons/myButton.vue'
+import myButton from '@/components/elements/myButton.vue'
 
 export default {
     title: 'Elements/MyButton',
@@ -33,5 +33,41 @@ export const PrimaryButton = {
     args: {
         size: "regular",
         variant: "default"
+    }
+}
+
+export const SecondaryButton = {
+    render: (args) => {
+        return {
+            components: {
+                myButton,
+            },
+            setup() {
+                return {args}
+            },
+            template: `<myButton v-bind="args">My link Button</myButton>`
+        }
+    },
+    args: {
+        size: "regular",
+        variant: "rounded"
+    }
+}
+
+export const TeritiaryButton = {
+    render: (args) => {
+        return {
+            components: {
+                myButton,
+            },
+            setup() {
+                return {args}
+            },
+            template: `<myButton v-bind="args">My link Button</myButton>`
+        }
+    },
+    args: {
+        size: "small",
+        variant: "rounded"
     }
 }

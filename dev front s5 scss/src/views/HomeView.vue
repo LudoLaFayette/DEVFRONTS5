@@ -1,7 +1,8 @@
 <script setup>
-import myButton from '@/components/icons/myButton.vue'
+import myButton from '@/components/elements/myButton.vue'
 import Layout from '@/components/layouts/DefaultLayout.vue'
 import MyBackgroundScroll from '@/components/MyBackgroundScroll.vue';
+import myIcon from '@/components/elements/myIcon.vue'
 </script>
 
 <template>
@@ -72,6 +73,7 @@ import MyBackgroundScroll from '@/components/MyBackgroundScroll.vue';
       <MyButton href="/about">My link Button</MyButton>
     </template>
   </Layout>
-
+  <myIcon/>
+  
   <MyBackgroundScroll/> 
 </template>
