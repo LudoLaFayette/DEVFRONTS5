@@ -1,11 +1,11 @@
 <template>
     <i class="icon">
-        <component :is="getIcon"/>
+        <component :is="getIcon" />
     </i>
 </template>
 
 <script setup>
-import { defineProps, computed } from 'vue';
+import { computed } from 'vue';
 import iconCommunity from '../icons/iconCommunity.vue';
 import iconDocumentation from '../icons/iconDocumentation.vue'
 import iconEcosystem from '../icons/iconEcosystem.vue'

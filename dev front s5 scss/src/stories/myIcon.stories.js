@@ -1,4 +1,5 @@
 import myIcon from '@/components/elements/myIcon.vue'
+import myHour from '@/components/elements/myHour.vue'
 
 export default {
     title: 'Elements/MyIcon',
@@ -21,6 +22,22 @@ export const PrimaryIcon = {
                 return {args}
             },
             template: `<myIcon v-bind="args">My link Button</myIcon>`
+        }
+    },
+    args: {
+        
+    }
+}
+export const Hour = {
+    render: (args) => {
+        return {
+            components: {
+                myHour,
+            },
+            setup() {
+                return {args}
+            },
+            template: `<myHour v-bind="args">My link Button</myHour>`
         }
     },
     args: {
