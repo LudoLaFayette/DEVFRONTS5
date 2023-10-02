@@ -1,5 +1,6 @@
 {
   "devDependencies": {
-    "@storybook/vue": "^7.4.5"
+    "@storybook/vue": "^7.4.5",
+    "storybook": "^7.4.5"
   }
 }
