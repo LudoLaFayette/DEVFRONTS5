@@ -1,5 +1,4 @@
 import myIcon from '@/components/elements/myIcon.vue'
-import myHour from '@/components/elements/myHour.vue'
 
 export default {
     title: 'Elements/MyIcon',
@@ -7,7 +6,7 @@ export default {
     argTypes: {
         name : {
             control : "select",
-            options: ['community', 'documentation', 'ecosystem', 'tooling', 'support']
+            options: ['community', 'documentation', 'ecosystem', 'tooling', 'support', 'arrowLeft', 'arrowRight', 'chevronLeft', 'deliveryTruck', 'facebook', 'hour', 'instagram','linkedin', 'mapPin', 'phoneCall','play', 'search', 'shoppingBag','star', 'twitter', 'ustensils', 'ustensilsCrossed']
         }
     }
 }
@@ -28,19 +27,4 @@ export const PrimaryIcon = {
         
     }
 }
-export const Hour = {
-    render: (args) => {
-        return {
-            components: {
-                myHour,
-            },
-            setup() {
-                return {args}
-            },
-            template: `<myHour v-bind="args">My link Button</myHour>`
-        }
-    },
-    args: {
-        
-    }
-}
+
