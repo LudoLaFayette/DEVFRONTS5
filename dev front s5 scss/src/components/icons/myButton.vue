@@ -1,32 +1,36 @@
 <script setup>
-import {ref} from "vue";
+import { ref } from "vue";
 
-const props = defineProps(    
- {
+const props = defineProps(
+    {
         text: String,
         link: String,
-        size: String, 
-        variant: String 
+        size: String,
+        variant: String
     })
-    const className = ref(`button ${props.variant === "rounded" ? " -rounded" : ""} ${props.size === "small" ? " -small" : ""}`)     
-    
-          
+const className = ref(`button ${props.variant === "rounded" ? " -rounded" : ""} ${props.size === "small" ? " -small" : ""}`)
+
+
 
 </script>
 
 <template>
-    <a v-if="link" :class="className " :href="link"><slot></slot></a>
-    <button v-else :class="className" ><slot></slot></button>
+    <a v-if="link" :class="className" :href="link">
+        <slot></slot>
+    </a>
+    <button v-else :class="className">
+        <slot></slot>
+    </button>
 </template>
 
 <style lang="scss" scoped>
 // @import '../../../scss/foundations/variables';
-.button{
+.button {
     background-color: $primary-color;
     background: linear-gradient(180deg, $secondary-color 0%, $primary-color 100%);
     border: none;
-    border-radius: rem(15);   
-    box-shadow: 0px rem(4) rem(4) rgba(0,0, 0, 0.25);
+    border-radius: rem(15);
+    box-shadow: 0px rem(4) rem(4) rgba(0, 0, 0, 0.25);
     color: $white;
     display: inline-block;
     font-family: $primary-font-familly;
@@ -35,17 +39,18 @@ const props = defineProps(
     padding: rem(33) rem(67);
     text-decoration: none;
     word-wrap: break-word;
-    &.-rounded{
+
+    &.-rounded {
         background: $primary-color;
         border-radius: rem(37);
         padding: rem(26) rem(64);
         font-weight: 500;
     }
-    &.-small{
+
+    &.-small {
         background: $primary-color;
         font-size: $tiny_font_size;
         padding: rem(14) rem(29);
         font-weight: 400;
     }
-}
-</style>
+}</style>
