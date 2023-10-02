@@ -2,32 +2,32 @@ import myButton from '@/components/icons/myButton.vue'
 
 export default {
     title: 'Elements/MyButton',
-    component: 'MyButton',
+    component: myButton,
     argTypes: {
         href: {
-            control: 'text'
+            control: "text"
         },
         size: {
-            control: "select"
+            control: "select",
+            options: ['regular', 'small']
         },
         variant: {
             control: "select",
             options: ['default', 'rounded']
         }
     }
-
 }
 
 export const PrimaryButton = {
     render: (args) => {
         return {
-            component: {
-                myButton
+            components: {
+                myButton,
             },
             setup() {
-                return args
+                return {args}
             },
-            template: '<MyButton v-bind={args}">My link Button</MyButton>'
+            template: `<myButton v-bind="args">My link Button</myButton>`
         }
     },
     args: {

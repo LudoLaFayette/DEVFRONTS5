@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { computed } from "vue";
 
 const props = defineProps(
     {
@@ -8,17 +8,20 @@ const props = defineProps(
         size: String,
         variant: String
     })
-const className = ref(`button ${props.variant === "rounded" ? " -rounded" : ""} ${props.size === "small" ? " -small" : ""}`)
-
+// const className = ref(`button ${props.variant === "rounded" ? " -rounded" : ""} ${props.size === "small" ? " -small" : ""}`)
+const className = computed(() => ({
+    ' -rounded': props.variant === 'rounded',
+    ' -small': props.size === 'small'
+}));
 
 
 </script>
 
 <template>
-    <a v-if="link" :class="className" :href="link">
+    <a v-if="link" :class="className" :href="link" class="button">
         <slot></slot>
     </a>
-    <button v-else :class="className">
+    <button v-else :class="className" class="button">
         <slot></slot>
     </button>
 </template>
@@ -53,4 +56,5 @@ const className = ref(`button ${props.variant === "rounded" ? " -rounded" : ""} 
         padding: rem(14) rem(29);
         font-weight: 400;
     }
-}</style>
+}
+</style>
