@@ -1,20 +1,21 @@
 <template>
-    <i class="icon">
-        <component :is="getIcon" />
+    <i class="icon" :class="className">
+        <component :is="getIcon" class="icon__" />
     </i>
 </template>
 
 <script setup>
 import { computed } from 'vue';
+
 import iconCommunity from '../icons/iconCommunity.vue';
-import iconDocumentation from '../icons/iconDocumentation.vue'
-import iconEcosystem from '../icons/iconEcosystem.vue'
-import iconTooling from '../icons/iconTooling.vue'
-import iconSupport from '../icons/iconSupport.Vue'
+import iconDocumentation from '../icons/iconDocumentation.vue';
+import iconEcosystem from '../icons/iconEcosystem.vue';
+import iconTooling from '../icons/iconTooling.vue';
+import iconSupport from '../icons/iconSupport.Vue';
 
 //Icones du projet
-import iconArrowLeft from '../icons/iconArrowLeft.vue'
-import iconArrowRight from '../icons/iconArrowRight.vue'
+import iconArrowLeft from '../icons/iconArrowLeft.vue';
+import iconArrowRight from '../icons/iconArrowRight.vue';
 import iconChrevronLeft from '../icons/iconChrevronLeft.vue';
 import iconDeliveryTruck from '../icons/iconDeliveryTruck.vue';
 import iconFacebook from '../icons/iconFacebook.vue';
@@ -30,9 +31,12 @@ import iconStar from '../icons/iconStar.Vue';
 import iconTwitter from '../icons/iconTwitter.vue';
 import iconUstensils from '../icons/iconUstensils.vue';
 import iconUstensilsCrossed from '../icons/iconUstensilsCrossed.vue';
+import iconStarTangerine from '../icons/iconStarTangerine.vue'
 
 const props = defineProps({
     name: String,
+    background: String,
+    size: String,
 })
 
 const getIcon = computed(() => {
@@ -57,11 +61,11 @@ const getIcon = computed(() => {
             return iconFacebook;
         case 'hour':
             return iconHour;
-        case 'instagram': 
+        case 'instagram':
             return iconInstagram;
         case 'linkedin':
             return iconLinkedin
-        case 'mapPin': 
+        case 'mapPin':
             return iconMapPin
         case 'phoneCall':
             return iconPhoneCall
@@ -71,19 +75,29 @@ const getIcon = computed(() => {
             return iconSearch
         case 'shoppingBag':
             return iconShoppingBag
-        case 'star' :
+        case 'star':
             return iconStar;
-        case 'twitter' : 
+        case 'twitter':
             return iconTwitter
-        case 'ustensils': 
+        case 'ustensils':
             return iconUstensils
         case 'ustensilsCrossed':
             return iconUstensilsCrossed
+        case 'favori':
+            return iconStarTangerine
         default:
             return iconSupport
     }
 })
-
+const className = computed(() => ({
+    ' -backgroundW': props.background === 'backgroundW',
+    ' -backgroundBCK': props.background === 'backgroundBCK',
+    ' -backgroundT': props.background === 'backgroundT',
+    ' -backgroundTT': props.background === 'backgroundTT',
+    ' -backgroundPlay': props.background === 'backgroundPlay',
+    ' -smallIcon': props.size === 'smallIcon',
+    ' -bigIcon': props.size === 'bigIcon'
+}));
 </script>
 
 <style lang="scss" scoped>
@@ -91,9 +105,77 @@ const getIcon = computed(() => {
     display: inline-flex;
     align-items: center;
     border-radius: 100%;
-    box-shadow: 0 0 50px gray;
+    box-shadow: 0 0 25px rgba(131, 165, 255, 0.25);
     height: rem(50);
     width: rem(50);
     justify-content: center;
+
+    &.-backgroundW {
+        background-color: $white;
+        color: black;
+        svg{
+            fill: none;
+        }
+        
+    }
+    &.-backgroundPlay {
+        background-color: $white;
+        color: $primary-color;
+        svg{
+            fill: $primary-color;
+        }
+        
+    }
+
+
+
+    &.-backgroundBCK {
+        background-color: $black;
+        color: white;
+        svg{
+            fill: none;
+        }
+        
+    }
+
+
+
+    &.-backgroundT {
+        background-color: $primary-color;
+        color: white;
+
+        svg{
+            fill: none;
+        }
+    }
+
+    &.-backgroundTT {
+        background-color: #F5DDC4;
+        color: $primary-color;
+        fill: $primary-color;
+    }
+
+    &.-smallIcon {
+        height: rem(50);
+        width: rem(50);
+
+        svg {
+            scale: 1.10;
+        }
+    }
+
+    &.-bigIcon {
+
+        height: rem(120);
+        width: rem(120);
+
+        svg {
+            scale: 2.75 ;
+        }
+    }
+
+
+
+
 }
 </style>

@@ -1,5 +1,5 @@
 <script setup>
-  import MyCard from './MyCard.vue'
+  import myCard from './myCard.vue'
   import { reactive } from 'vue'
  
   const response = [
@@ -52,7 +52,7 @@
 
 <template>
   <div class='cards'>
-    <MyCard v-for='card in cards' v-bind='card' /> 
+    <myCard v-for='card in cards' v-bind='card' /> 
   </div>
 </template>
 

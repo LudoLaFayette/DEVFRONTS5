@@ -4,11 +4,11 @@ export default {
     title: 'Components/MyCard',
     component: myCard,
     argTypes: {
-        description : {
-            control : "text",           
-        },
         title : {
             control : "text",
+        },
+        description : {
+            control : "text",           
         },
         buttonLabel : {
             control : "text",
@@ -35,9 +35,9 @@ export const Card = {
         }
     },
     args: {
-        description : 'description de la card',
-        title : 'mon titre',
-        buttonLabel : 'mon label',
+        title : 'I LOVE CATS',
+        description : 'Cats are the best pets !',        
+        buttonLabel : 'Adopt me',
         imageSrc : 'http://placekitten.com/200/150',
         imageAlt : 'test'
     }
