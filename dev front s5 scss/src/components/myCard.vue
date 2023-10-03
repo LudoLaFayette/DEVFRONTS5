@@ -15,7 +15,7 @@
     <!-- Card 1 : Présentation des objectifs du site  -->
     <div class="cardGoal">
         <div class="cardGoal__icon">
-            <myIcon name="ustensilsCrossed" size="smallICon" background="backgroundTT"></myIcon>
+            <myIcon name="ustensilsCrossed" size="bigIcon" background="backgroundTT"></myIcon>
         </div>
         <div class="cardGoal__title">
             <h2>Healthy Food</h2>
