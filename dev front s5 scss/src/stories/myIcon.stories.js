@@ -15,7 +15,8 @@ export default {
         background: {
             control : "select",
             options: ['backgroundW', 'backgroundT', 'backgroundBCK', 'backgroundTT', 'backgroundPlay']
-        }
+        },
+        
     }
 }
 
@@ -28,7 +29,7 @@ export const PrimaryIcon = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -46,7 +47,7 @@ export const Play = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -64,7 +65,7 @@ export const arrowLeft = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -82,7 +83,7 @@ export const arrowLeft2 = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -100,7 +101,7 @@ export const arrowRight = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -119,7 +120,7 @@ export const chevronLeft = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -138,7 +139,7 @@ export const tangerArrowLeft = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -157,7 +158,7 @@ export const tangerArrowRight = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -176,7 +177,7 @@ export const ShoppingBag = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -195,7 +196,7 @@ export const ArrowLeftSimple = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -214,7 +215,7 @@ export const ArrowRightSimple = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -233,7 +234,7 @@ export const Search = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -251,7 +252,7 @@ export const Hour = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -270,7 +271,7 @@ export const MapPin = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -289,7 +290,7 @@ export const PhoneCall = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -307,7 +308,7 @@ export const ChevronLeftSimple = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -326,7 +327,7 @@ export const Star = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -345,12 +346,13 @@ export const Favori = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
         name : 'favori',
-        size: 'smallIcon',        
+        size: 'smallIcon', 
+            
     }
 }
 export const Ustensils = {
@@ -362,7 +364,7 @@ export const Ustensils = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -380,7 +382,7 @@ export const UstensilsCrossed = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -398,7 +400,7 @@ export const Truck = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -417,7 +419,7 @@ export const TangerineUstensils = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -435,7 +437,7 @@ export const TangerineCrossedUstensils = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -454,7 +456,7 @@ export const TangerineTruck = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -472,7 +474,7 @@ export const Facebook = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -490,7 +492,7 @@ export const Twitter = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -508,7 +510,7 @@ export const Instagram = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {
@@ -526,7 +528,7 @@ export const Linkedin = {
             setup() {
                 return {args}
             },
-            template: `<myIcon v-bind="args">My link Button</myIcon>`
+            template: `<myIcon v-bind="args"> </myIcon>`
         }
     },
     args: {

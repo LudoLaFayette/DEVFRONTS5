@@ -32,6 +32,7 @@ import iconTwitter from '../icons/iconTwitter.vue';
 import iconUstensils from '../icons/iconUstensils.vue';
 import iconUstensilsCrossed from '../icons/iconUstensilsCrossed.vue';
 import iconStarTangerine from '../icons/iconStarTangerine.vue'
+import iconChevronRight from '../icons/iconChevronRight.vue';
 
 const props = defineProps({
     name: String,
@@ -85,6 +86,8 @@ const getIcon = computed(() => {
             return iconUstensilsCrossed
         case 'favori':
             return iconStarTangerine
+        case 'chevronRight':
+            return iconChevronRight
         default:
             return iconSupport
     }
@@ -95,6 +98,7 @@ const className = computed(() => ({
     ' -backgroundT': props.background === 'backgroundT',
     ' -backgroundTT': props.background === 'backgroundTT',
     ' -backgroundPlay': props.background === 'backgroundPlay',
+    ' -backgroundArrowTonWBkrd': props.background === 'backgroundArrowTonWBkrd',
     ' -smallIcon': props.size === 'smallIcon',
     ' -bigIcon': props.size === 'bigIcon'
 }));
@@ -113,6 +117,14 @@ const className = computed(() => ({
     &.-backgroundW {
         background-color: $white;
         color: black;
+        svg{
+            fill: none;
+        }
+        
+    }
+    &.-backgroundArrowTonWBkrd {
+        background-color: $white;
+        color: $primary-color;
         svg{
             fill: none;
         }

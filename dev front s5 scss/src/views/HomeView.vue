@@ -71,7 +71,7 @@ import myIcon from '@/components/elements/myIcon.vue'
       <!-- <myButton link="#">Order Now</myButton>
       <myButton link="#" variant="rounded">Order Now</myButton>
       <myButton link="#" size="small">Order Now</myButton> -->
-      <myButton href="/about">My link Button</myButton>
+      <myButton href="/order">Order Now</myButton>
       <myIcon/>
     </template>
   </Layout>
