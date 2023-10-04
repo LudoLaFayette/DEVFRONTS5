@@ -13,22 +13,22 @@ import { computed } from "vue";
 
 const props = defineProps(
     {
-        style: String,
+        type: String,
         content: String,
     })
 // const className = ref(`button ${props.variant === "rounded" ? " -rounded" : ""} ${props.size === "small" ? " -small" : ""}`)
 const className = computed(() => ({
-    ' -h1': props.style === 'h1',
-    ' -h2': props.style === 'h2',
-    ' -h3': props.style === 'h3',
-    ' -h4': props.style === 'h4',
-    ' -h5': props.style === 'h5',
+    ' -h1': props.type === 'h1',
+    ' -h2': props.type === 'h2',
+    ' -h3': props.type === 'h3',
+    ' -h4': props.type === 'h4',
+    ' -h5': props.type === 'h5',
 }));
 
 
 </script>
 
-<style lang="scss" scoped>
+<type lang="scss" scoped>
 .title {
     font-size: $title_size;
 
@@ -56,4 +56,4 @@ const className = computed(() => ({
 
 ;
 
-;</style>
+;</type>

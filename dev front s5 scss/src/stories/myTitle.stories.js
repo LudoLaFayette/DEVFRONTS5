@@ -4,7 +4,7 @@ export default {
     title: 'Elements/MyTitle',
     component: myTitle,
     argTypes: {
-        style : {
+        type : {
             control : "select",
             options: ['h1', 'h2', 'h3', 'h4', 'h5']
         },
@@ -27,7 +27,7 @@ export const Titles = {
         }
     },
     args: {
-       style: 'h1',
+       type: 'h1',
        content : 'Bonjour'
     }
 }
