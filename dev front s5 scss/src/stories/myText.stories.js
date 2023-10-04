@@ -6,7 +6,7 @@ export default {
     argTypes: {
         size : {
             control : "select",
-            options: ['pi', 'p2']
+            options: ['p1', 'p2']
         },
         content : {
             control : "text",           
