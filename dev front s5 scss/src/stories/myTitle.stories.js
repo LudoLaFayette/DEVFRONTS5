@@ -27,7 +27,7 @@ export const Titles = {
         }
     },
     args: {
-       type: 'h1',
-       content : 'Bonjour'
+        type: 'h1',
+        content : 'Bonjour'
     }
 }

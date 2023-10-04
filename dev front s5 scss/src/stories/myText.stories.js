@@ -27,7 +27,7 @@ export const Texts = {
         }
     },
     args: {
-       size: 'p1',
-       content : 'Bonjour'
+        size: 'p1',
+        content : 'Bonjour'
     }
 }
