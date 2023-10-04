@@ -2,7 +2,8 @@
 import myButton from '@/components/elements/myButton.vue'
 import Layout from '@/components/layouts/DefaultLayout.vue'
 import MyBackgroundScroll from '@/components/MyBackgroundScroll.vue';
-import myIcon from '@/components/elements/myIcon.vue'
+import myIcon from '@/components/elements/myIcon.vue';
+import myNote from '../components/elements/myNote.vue';
 </script>
 
 <template>
@@ -41,6 +42,7 @@ import myIcon from '@/components/elements/myIcon.vue'
     <!-- <p></p> -->
     <Layout>
         <template v-slot:header>
+          <myNote/>
             <p>hello world</p>
             <nav>
                 <ul>
@@ -73,6 +75,7 @@ import myIcon from '@/components/elements/myIcon.vue'
       <myButton link="#" size="small">Order Now</myButton> -->
             <myButton href="/order">Order Now</myButton>
             <myIcon/>
+            <myNote/>
         </template>
     </Layout>
   

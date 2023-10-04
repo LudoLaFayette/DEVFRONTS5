@@ -9,40 +9,15 @@
             <p>{{ description }}</p>
         </div>
         <div class="card__button">
-            <myButton variant="rounded" :getIcon="true" size="small">{{ buttonLabel }}</myButton>
-        </div>
-    </div>
-    <!-- Card 1 : Présentation des objectifs du site  -->
-    <div class="cardGoal">
-        <div class="cardGoal__icon">
-            <myIcon name="ustensilsCrossed" size="bigIcon" background="backgroundTT"></myIcon>
-        </div>
-        <div class="cardGoal__title">
-            <h2>Healthy Food</h2>
-
-        </div>
-        <div class="cardGoal__content">
-            <p>But I must explain to you how all this
-                mistaken idea of denouncing pleasure and
-                praising pain was born.</p>
+            <myButton variant="rounded" :getIcon="false" size="small">{{ buttonLabel }}</myButton>
         </div>
     </div>
 
-    <!-- Card 2 : Présentation des produits  -->
-    <div class="cardProduct">
-        <div class="cardProduct__Image">
-            <img src="../assets/green-beans.jpeg" alt="haricots verts">
-        </div>
-        <div>
-            <myTitle type="h4" content="Green Beans"></myTitle>
-        </div>
-    </div>
 </template>
 
 <script setup>
 import myButton from '@/components/elements/myButton.vue'
-import myIcon from './elements/myIcon.vue';
-import myTitle from './elements/myTitle.vue'
+
 //import des titles sous story a faire (h1,h2...)
 
 const props = defineProps(
@@ -76,44 +51,8 @@ const props = defineProps(
     }
 }
 
-.cardGoal {
-    max-width: 480px;
-    max-height: 480px;
-    border-radius: rem(20);
-    border: rem(1) solid $grey;
-    overflow: hidden;
-    padding: rem(90) rem(20);
-    line-height: 1.2;
-    text-align: center;
-
-    >*+* {
-        margin-top: rem(40);
-    }
-
-    &__title {
-        font-family: Helvetica, sans-serif;
-
-    }
-
-    &__content {
-        font-family: Helvetica, sans-serif;
 
 
-    }
 
-    .cardProduct {
-        max-width: 200px;
-        max-height: 200px;
-        border-radius: rem(20);
-        border: rem(3) solid $grey;
-        overflow: hidden;
-        padding: rem(90) rem(20);
-        line-height: 1.2;
-        text-align: center;
 
-        &__Image{
-            max-width: 100%;
-        }
-    }
-}
 </style>
