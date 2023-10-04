@@ -51,9 +51,9 @@ const cards = reactive(response)
 </script>
 
 <template>
-  <div class='cards'>
-    <myCard v-for='card in cards' v-bind='card' /> 
-  </div>
+    <div class='cards'>
+        <myCard v-for='card in cards' v-bind='card' /> 
+    </div>
 </template>
 
 <style lang='scss' scoped>
