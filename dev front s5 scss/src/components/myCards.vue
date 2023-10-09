@@ -1,5 +1,5 @@
 <script setup>
-import myCard from './myCard.vue'
+import myCardVignette from './myCardVignette.vue'
 import { reactive } from 'vue'
  
 const response = [
@@ -52,14 +52,14 @@ const cards = reactive(response)
 
 <template>
     <div class='cards'>
-        <myCard v-for='card in cards' v-bind='card' /> 
+        <myCardVignette v-for='card in cards' v-bind='card' /> 
     </div>
 </template>
 
 <style lang='scss' scoped>
 .cards{
   display: grid;
-  gap: rem(20);
+  gap: rem(30);
   grid-template-columns: repeat(3, 1fr);
 }
 </style>
