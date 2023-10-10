@@ -4,10 +4,51 @@ import Layout from '@/components/layouts/DefaultLayout.vue'
 import MyBackgroundScroll from '@/components/MyBackgroundScroll.vue';
 import myIcon from '@/components/elements/myIcon.vue';
 import myNote from '../components/elements/myNote.vue';
+import {onMounted, ref, computed} from 'vue';
+import axios from 'axios';
+
+const client = axios.create({
+    baseURL: import.meta.env.VITE_API_URL,
+});
+
+const recipes = ref([]) 
+
+const getRecipes = async () => {
+    const response = await client.get('/recipes')
+    return response.data
+
+}
+const recipesNames = computed(() =>{
+    return recipes.value.map((items) => items.recipe_name ); 
+})
+
+const spaghettiRecipes = computed(() =>{
+    return recipes.value.filter((item) => item.recipe_name.toLowerCase().includes('Spaghetti'))
+})
+
+const hadGoalNo1 = computed(() =>{
+    return recipes.value.some((item) => item.goal_id === 1)
+})
+
+
+onMounted(async () =>{ 
+    recipes.value = await getRecipes();
+    console.log(recipesNames)
+    console.log(spaghettiRecipes)
+    console.log(hadGoalNo1)
+
+    
+    // getRecipes();
+});
+
 </script>
 
 <template>
-
+    <ul >
+        <li v-for="(recipe, index) in recipes" :key="index">
+            {{ recipe.recipe_name }}
+        </li>
+    </ul>
     <!-- <Layout>
     <template #header>
       <nav>
@@ -40,6 +81,8 @@ import myNote from '../components/elements/myNote.vue';
   <MyButton href="/about">My link Button</MyButton>
   <MyButton variant="rounded" >My rounded Button</MyButton> -->
     <!-- <p></p> -->
+
+    <!-- {{ recipes }} -->
     <Layout>
         <template v-slot:header>
           <myNote/>

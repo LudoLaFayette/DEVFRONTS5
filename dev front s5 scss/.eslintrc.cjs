@@ -8,7 +8,7 @@ module.exports = {
         ecmaVersion: 'latest'
     },
     rules: {
-        "no-console": "error",
+        
         "indent": ["error", 4],
         "vue/html-indent" : ["error", 4]
     }
