@@ -6,6 +6,7 @@ import myIcon from '@/components/elements/myIcon.vue';
 import myNote from '../components/elements/myNote.vue';
 import {onMounted, ref, computed} from 'vue';
 import axios from 'axios';
+import myDynamicCard from '../components/myDynamicCard.vue';
 
 const client = axios.create({
     baseURL: import.meta.env.VITE_API_URL,
@@ -29,26 +30,73 @@ const spaghettiRecipes = computed(() =>{
 const hadGoalNo1 = computed(() =>{
     return recipes.value.some((item) => item.goal_id === 1)
 })
+const hasGoalId1Long = computed(() => {
+    return recipes.value.some((item) => {
+        if (item.goal_id === 1) {
+            return true
+        } else {
+            return false
+        }
+    })
+})
 
+
+const addRecipe = () => {
+  recipes.value.push({ recipe_name: 'Pesto spaghetti' })
+}
+
+const recipesInHero = 4
+// Utiliser 2 computed pour gérer les listes de recette
+// Une computed pour afficher les 4 premières du tableau recipes avec recipes.value.slice
+// Une computed pour afficher toutes les autres avec recipes.value.slice
+
+const heroRecipes = computed(() => {
+  // indexes de 0 à 3 (4 exclus)
+  return recipes.value.slice(0, recipesInHero)
+})
+
+const gridPage = ref(1)
+
+const gridRecipes = computed(() => {
+  const recipesByPage = 4
+  // pour gridPage === 1 => slice(4, 7)
+  // pour gridPage === 2 => slice(4, 10)
+  // pour gridPage === 3 => slice(4, 13)
+  return recipes.value.slice(recipesInHero, recipesInHero + gridPage.value * recipesByPage)
+})
+
+// Retourner s'il reste des recettes à afficher ou non
+const moreRecipesToShow = computed(() => {
+  return gridRecipes.value.length < (recipes.value.length - recipesInHero)
+})
+
+const seeMoreRecipe = () => {
+  gridPage.value++
+}
 
 onMounted(async () =>{ 
     recipes.value = await getRecipes();
     console.log(recipesNames)
     console.log(spaghettiRecipes)
-    console.log(hadGoalNo1)
-
-    
+    console.log(hadGoalNo1)    
     // getRecipes();
 });
 
 </script>
 
 <template>
-    <ul >
+    <!-- <ul >
         <li v-for="(recipe, index) in recipes" :key="index">
             {{ recipe.recipe_name }}
         </li>
-    </ul>
+    </ul> -->
+    <div v-for="(recipe, index) in heroRecipes" :key="index" >
+        <myDynamicCard :title="recipe.recipe_name" :description="recipe.recipe_description" :image="recipe.image_url" :id="recipe.recipe_id"></myDynamicCard>
+    </div>
+    <div v-for="(recipe, index) in gridRecipes" :key="index" >
+        <myDynamicCard :title="recipe.recipe_name" :description="recipe.recipe_description" :image="recipe.image_url" :id="recipe.recipe_id"></myDynamicCard>
+    </div>
+    
     <!-- <Layout>
     <template #header>
       <nav>
@@ -83,9 +131,10 @@ onMounted(async () =>{
     <!-- <p></p> -->
 
     <!-- {{ recipes }} -->
+    <button  @click="seeMoreRecipes">see more recipes</button>
     <Layout>
         <template v-slot:header>
-          <myNote/>
+            <myNote/>
             <p>hello world</p>
             <nav>
                 <ul>
@@ -122,6 +171,6 @@ onMounted(async () =>{
         </template>
     </Layout>
   
-  
+    
   
 </template>
