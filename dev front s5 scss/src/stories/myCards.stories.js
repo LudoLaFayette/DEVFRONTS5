@@ -1,17 +1,17 @@
-import MyCards from '@/components/MyCards.vue'
+// import MyCards from '@/components/myCard/myCards.vue'
 
-export default {
-    title: 'Components/MyCards',
-    component: MyCards,
-}
+// export default {
+//     title: 'Components/MyCards',
+//     component: MyCards,
+// }
 
-export const Cards = {
-    render: () => {
-        return {
-            components: {
-                MyCards
-            },
-            template: `<MyCards />`
-        }
-    },
-}
+// export const Cards = {
+//     render: () => {
+//         return {
+//             components: {
+//                 MyCards
+//             },
+//             template: `<MyCards />`
+//         }
+//     },
+// }
